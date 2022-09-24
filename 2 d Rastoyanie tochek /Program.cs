@@ -18,4 +18,4 @@ int secondTochkaX = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("vvedite Y coordinat vtoroy tochki");
 int secondTochkaY = Convert.ToInt32(Console.ReadLine());
 double Dlinnamejdutochkami = FormulaDlinny(firstTochkaX, firstTochkaY, secondTochkaX, secondTochkaY);
-Console.WriteLine(Dlinnamejdutochkami);
+Console.WriteLine($"Rasstoyanie mejdu tochek {Dlinnamejdutochkami}");
