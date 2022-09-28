@@ -6,21 +6,37 @@
 
 9012 -> 12
 Console.WriteLine("Hello, World!");
+*/
 
+int getuserNumber ()
 
-int getuserNumber (int UserNumber)
 {
-    int result= 0;
+    int result = 0;
     
-    while ( UserNumber < 10)
+    while (result == 0 || Math.Abs(result)< 10)
     {
-         Console.WriteLine ($"VVedite celoe chislo bolshe 9, Vy vveli nekoreknoe chislo");
-         break;
+    
+        string Userline = Console.ReadLine();
+        int.TryParse(Userline, out result);
+
+        if (result == 0)
+        {
+            Console.WriteLine ($"Vy Vveli {Userline} eto ne coreknoe chislo");
+        }
+
+        else if (Math.Abs(result)< 10)
+        {
+            Console.WriteLine ($"Modul chisla {Userline} nepodhodit, neobhodimo kak minimum dvuh znachnoe chislo");
+
+        } 
+
+      
+       
     }
+    return Math.Abs(result);
     
-    return result;
-    
-} */
+}
+
 
 int getSumDigit (int Chislo )
 {
@@ -36,7 +52,7 @@ int getSumDigit (int Chislo )
     return result;
 }
 
-Console.WriteLine(" Vvedite Chislo Bolee 9");
-int Chislo = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(" Vvedite NE Odnoznachnoe chislo");
+int Chislo = getuserNumber ();
 int SumDigit = getSumDigit ( Chislo );
 Console.WriteLine(SumDigit);
